@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sarah 💖</title>
+<meta name="theme-color" content="#1a0b1f">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+<style>
+:root{--bg:#1a0b1f;--bg2:#2b1233;--pink:#ff5c93;--rose:#ff9ebb;--gold:#ffd28a;--text:#fff4f8;--card:rgba(255,255,255,.07);--line:rgba(255,255,255,.14)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:var(--text);background:radial-gradient(1200px 700px at 20% -10%,#4a1a55 0%,transparent 60%),radial-gradient(900px 600px at 110% 20%,#5a1c3f 0%,transparent 55%),var(--bg);min-height:100vh;overflow-x:hidden}
+#hearts{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.float{position:absolute;bottom:-40px;opacity:.0;animation:rise linear forwards}
+@keyframes rise{0%{transform:translateY(0) rotate(0);opacity:0}10%{opacity:.7}100%{transform:translateY(-110vh) rotate(40deg);opacity:0}}
+main{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:0 20px 80px}
+nav{position:sticky;top:0;z-index:5;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;padding:12px;background:rgba(26,11,31,.7);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav a{color:var(--rose);text-decoration:none;font-size:.9rem;padding:6px 12px;border-radius:99px;transition:.2s}
+nav a:hover{background:var(--card);color:#fff}
+.hero{text-align:center;padding:90px 0 60px}
+.badge{display:inline-block;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);padding:6px 14px;border-radius:99px;margin-bottom:22px}
+h1{font-size:clamp(3rem,12vw,6.5rem);line-height:1;font-weight:800;background:linear-gradient(90deg,var(--pink),var(--gold),var(--rose));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% auto;animation:shine 6s linear infinite}
+@keyframes shine{to{background-position:200% center}}
+.typed{min-height:2.4em;margin:22px auto 0;max-width:560px;font-size:1.2rem;color:var(--rose)}
+.cursor{display:inline-block;width:2px;height:1.1em;background:var(--rose);margin-left:3px;vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.big-heart{font-size:5rem;margin-top:26px;cursor:pointer;display:inline-block;animation:beat 1.4s ease-in-out infinite;user-select:none;filter:drop-shadow(0 0 24px rgba(255,92,147,.7))}
+.big-heart:active{transform:scale(.85)}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.18)}30%{transform:scale(1)}45%{transform:scale(1.12)}}
+.hint{font-size:.85rem;color:var(--rose);opacity:.75;margin-top:8px}
+.counter{font-size:.95rem;color:var(--gold);margin-top:18px}
+section{margin-top:70px}
+h2{font-size:1.9rem;margin-bottom:6px}
+.sub{color:var(--rose);opacity:.8;margin-bottom:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;backdrop-filter:blur(6px)}
+.btn{background:linear-gradient(135deg,var(--pink),#ff7ab0);color:#fff;border:0;padding:13px 26px;border-radius:99px;font-size:1rem;font-weight:600;cursor:pointer;transition:.2s;box-shadow:0 8px 24px rgba(255,92,147,.35)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,92,147,.5)}
+.btn.ghost{background:transparent;border:1px solid var(--line);box-shadow:none;color:var(--rose)}
+.reason{min-height:90px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:1.3rem;margin-bottom:18px;transition:opacity .25s}
+.center{text-align:center}
+.timeline{position:relative;padding-left:26px;border-left:2px dashed var(--line)}
+.mem{position:relative;margin-bottom:18px;cursor:pointer;transition:.2s}
+.mem::before{content:'';position:absolute;left:-35px;top:22px;width:14px;height:14px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 4px var(--bg),0 0 14px var(--pink)}
+.mem:hover{transform:translateX(4px)}
+.mem h3{font-size:1.1rem;display:flex;justify-content:space-between;gap:10px}
+.mem .tag{font-size:.75rem;color:var(--gold)}
+.mem .body{max-height:0;overflow:hidden;color:var(--rose);transition:max-height .4s ease,margin .4s}
+.mem.open .body{max-height:260px;margin-top:10px}
+.mem textarea{width:100%;min-height:80px;margin-top:10px;background:rgba(0,0,0,.25);border:1px solid var(--line);color:var(--text);border-radius:12px;padding:10px;font:inherit;resize:vertical}
+.letter{white-space:pre-wrap;line-height:1.8;font-size:1.08rem;font-family:Georgia,'Times New Roman',serif;background:linear-gradient(180deg,#fff7ee,#ffe9d6);color:#4a2b2b;border-radius:14px;padding:30px;box-shadow:0 20px 50px rgba(0,0,0,.4);position:relative}
+.seal{position:absolute;right:20px;top:-18px;font-size:2.2rem}
+.game{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:420px;margin:0 auto}
+.tile{aspect-ratio:1;border-radius:14px;border:1px solid var(--line);background:var(--card);font-size:1.8rem;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.25s;user-select:none}
+.tile.flip{background:linear-gradient(135deg,var(--pink),#ff7ab0);transform:rotateY(360deg)}
+.tile.done{background:rgba(255,210,138,.18);border-color:var(--gold)}
+.moves{text-align:center;margin-bottom:14px;color:var(--gold)}
+.ask{text-align:center;padding:40px 24px}
+.ask h3{font-size:1.7rem;margin-bottom:22px}
+.ask .row{display:flex;gap:16px;justify-content:center;align-items:center;min-height:70px;position:relative}
+.yes-msg{font-size:1.3rem;color:var(--gold);margin-top:18px;min-height:2em}
+footer{text-align:center;margin-top:80px;color:var(--rose);opacity:.8;font-size:.9rem}
+input[type=date]{background:rgba(0,0,0,.3);color:var(--text);border:1px solid var(--line);padding:8px 12px;border-radius:10px;font:inherit}
+.pop{position:fixed;pointer-events:none;z-index:50;font-size:1.6rem;animation:pop 1s ease-out forwards}
+@keyframes pop{0%{transform:translate(0,0) scale(.6);opacity:1}100%{transform:translate(var(--dx),var(--dy)) scale(1.4);opacity:0}}
+</style>
+</head>
+<body>
+<div id="hearts"></div>
+<nav>
+  <a href="#top">Home</a><a href="#reasons">Reasons</a><a href="#memories">Memories</a><a href="#letter">Letter</a><a href="#game">Game</a><a href="#ask">Question</a>
+</nav>
+<main id="top">
+  <div class="hero">
+    <span class="badge">Status: in love</span>
+    <h1>Sarah</h1>
+    <div class="typed"><span id="typed"></span><span class="cursor"></span></div>
+    <div class="big-heart" id="bigHeart" title="Tap me">❤️</div>
+    <p class="hint">tap the heart</p>
+    <p class="counter" id="counter"></p>
+  </div>
+
+  <section id="reasons">
+    <h2>🌟 Reasons I Appreciate You</h2>
+    <p class="sub">This list is append-only. New reasons are added every release.</p>
+    <div class="card center">
+      <div class="reason" id="reason">Press the button 👇</div>
+      <button class="btn" id="reasonBtn">Give me a reason</button>
+      <p class="hint" id="reasonCount"></p>
+    </div>
+  </section>
+
+  <section id="memories">
+    <h2>📸 Our Memories</h2>
+    <p class="sub">Tap a memory to open it, and write your own details in. They save on this device.</p>
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <section id="letter">
+    <h2>💌 A Letter For You</h2>
+    <p class="sub">Tap the envelope to open it.</p>
+    <div class="center" id="envelopeWrap"><button class="btn" id="openLetter">💌 Open letter</button></div>
+    <div class="letter" id="letterBox" style="display:none"><span class="seal">❤️</span><span id="letterText"></span></div>
+  </section>
+
+  <section id="game">
+    <h2>🧩 Match Our Hearts</h2>
+    <p class="sub">Find all the matching pairs.</p>
+    <div class="moves" id="moves">Moves: 0</div>
+    <div class="game" id="board"></div>
+    <div class="center" style="margin-top:16px"><button class="btn ghost" id="reset">Shuffle again</button></div>
+  </section>
+
+  <section id="ask">
+    <div class="card ask">
+      <h3>Will you keep being my favorite person? 💕</h3>
+      <div class="row" id="row">
+        <button class="btn" id="yes">Yes 💖</button>
+        <button class="btn ghost" id="no">No 🙈</button>
+      </div>
+      <div class="yes-msg" id="yesMsg"></div>
+    </div>
+  </section>
+
+  <footer>Made with ❤️ by Vincent · <a href="https://github.com/VincentAkwas/Sarah" style="color:var(--gold)">source on GitHub</a></footer>
+</main>
+
+<script>
+// ===== EASY SETTINGS: edit these =====
+const START_DATE = "";            // e.g. "2026-02-14" (leave empty to pick it on the page)
+const MESSAGES = ["You are my favorite notification.", "Every day with you is a good commit.", "Zero bugs. 100% us."];
+const REASONS = [
+  "You make ordinary days feel special.",
+  "You listen, even when I'm explaining tech nobody asked about.",
+  "You keep me grounded and keep me smiling.",
+  "You make hard things feel doable.",
+  "Your laugh is my favorite sound.",
+  "You believe in me on the days I don't.",
+  "You make me want to be better.",
+  "Being with you feels like home.",
+  "You are simply you, and that is more than enough."
+];
+const MEMORIES = [
+  {t:"The Day It All Started", tag:"memory 001", d:"Some commits change everything. This was one of them. Before: a normal codebase. After: a codebase with a reason to smile."},
+  {t:"Good Food, Good Company", tag:"memory 002", d:"Turns out the best feature in any day is sharing it with you."},
+  {t:"Laughing Until It Hurts", tag:"memory 003", d:"The kind of laughing where no one remembers the joke, only the feeling."},
+  {t:"What's Next", tag:"roadmap", d:"A surprise date, a beautiful trip, way too many photos, and choosing each other every day."}
+];
+const LETTER = `Dear Sarah,
+
+I'm a developer, so forgive me for saying this in a web page.
+
+You are the one thing in my life that never throws an exception. You make the hard days lighter and the good days better.
+
+Thank you for being patient with me when I'm lost in code at 2 AM, for laughing at my jokes (even the bad ones), and for being the best part of every day.
+
+If life is a long project, I'm glad you're my co-author.
+
+git commit -m "I love you"
+git push origin forever
+
+Yours always,
+Vincent ❤️`;
+// =====================================
+
+const $=s=>document.querySelector(s);
+const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+
+// floating hearts background
+const glyphs=["❤️","💖","💕","💗","✨","💘"];
+function floatHeart(){
+  const e=document.createElement("div");e.className="float";
+  e.textContent=glyphs[Math.floor(Math.random()*glyphs.length)];
+  e.style.left=Math.random()*100+"vw";
+  e.style.fontSize=(14+Math.random()*26)+"px";
+  e.style.animationDuration=(7+Math.random()*8)+"s";
+  $("#hearts").appendChild(e);
+  setTimeout(()=>e.remove(),16000);
+}
+setInterval(floatHeart,550);
+
+// burst on click
+function burst(x,y,n=10){
+  for(let i=0;i<n;i++){
+    const p=document.createElement("div");p.className="pop";
+    p.textContent=glyphs[Math.floor(Math.random()*glyphs.length)];
+    p.style.left=x+"px";p.style.top=y+"px";
+    const a=Math.random()*Math.PI*2,r=60+Math.random()*90;
+    p.style.setProperty("--dx",Math.cos(a)*r+"px");
+    p.style.setProperty("--dy",Math.sin(a)*r+"px");
+    document.body.appendChild(p);setTimeout(()=>p.remove(),1000);
+  }
+}
+document.addEventListener("click",e=>burst(e.clientX,e.clientY,6));
+$("#bigHeart").addEventListener("click",e=>{e.stopPropagation();burst(e.clientX,e.clientY,22)});
+
+// typing effect
+(function typer(){
+  let m=0,c=0,del=false;const el=$("#typed");
+  function tick(){
+    const s=MESSAGES[m];
+    el.textContent=s.slice(0,c);
+    if(!del&&c<s.length){c++;setTimeout(tick,60)}
+    else if(!del){del=true;setTimeout(tick,1800)}
+    else if(c>0){c--;setTimeout(tick,28)}
+    else{del=false;m=(m+1)%MESSAGES.length;setTimeout(tick,300)}
+  }
+  tick();
+})();
+
+// days together counter
+function renderCounter(){
+  const el=$("#counter");
+  const saved=START_DATE||store.get("startDate","");
+  if(!saved){
+    el.innerHTML='Set the date you started: <input type="date" id="dateIn"> ';
+    $("#dateIn").addEventListener("change",ev=>{store.set("startDate",ev.target.value);renderCounter()});
+    return;
+  }
+  const days=Math.floor((Date.now()-new Date(saved+"T00:00:00").getTime())/86400000);
+  el.innerHTML=days>=0?`📅 ${days.toLocaleString()} days of us and counting`:"📅 Counting down to us";
+  if(!START_DATE){const b=document.createElement("button");b.className="btn ghost";b.style.cssText="padding:4px 12px;font-size:.75rem;margin-left:10px;box-shadow:none";b.textContent="change";b.onclick=()=>{store.set("startDate","");renderCounter()};el.appendChild(b)}
+}
+renderCounter();
+
+// reasons
+let seen=new Set();
+$("#reasonBtn").addEventListener("click",()=>{
+  if(seen.size>=REASONS.length)seen.clear();
+  let i;do{i=Math.floor(Math.random()*REASONS.length)}while(seen.has(i));
+  seen.add(i);
+  const r=$("#reason");r.style.opacity=0;
+  setTimeout(()=>{r.textContent="“"+REASONS[i]+"”";r.style.opacity=1},200);
+  $("#reasonCount").textContent=`Reason ${seen.size} of ${REASONS.length} (and more coming)`;
+});
+
+// memories
+const notes=store.get("notes",{});
+MEMORIES.forEach((m,i)=>{
+  const d=document.createElement("div");d.className="card mem";
+  d.innerHTML=`<h3><span>${m.t}</span><span class="tag">${m.tag}</span></h3><div class="body"><p>${m.d}</p><textarea placeholder="Write your own details here: the date, the place, what happened..."></textarea></div>`;
+  const ta=d.querySelector("textarea");ta.value=notes[i]||"";
+  ta.addEventListener("click",e=>e.stopPropagation());
+  ta.addEventListener("input",()=>{notes[i]=ta.value;store.set("notes",notes)});
+  d.addEventListener("click",()=>d.classList.toggle("open"));
+  $("#timeline").appendChild(d);
+});
+
+// letter
+$("#openLetter").addEventListener("click",e=>{
+  $("#envelopeWrap").style.display="none";
+  $("#letterBox").style.display="block";
+  burst(e.clientX,e.clientY,24);
+  const out=$("#letterText");let i=0;
+  (function w(){out.textContent=LETTER.slice(0,i);if(i<LETTER.length){i+=2;setTimeout(w,22)}})();
+});
+
+// match game
+const icons=["❤️","🌹","💌","🍰","✨","💍","🧸","🌙"];
+let first=null,lock=false,moves=0,matched=0;
+function buildBoard(){
+  const b=$("#board");b.innerHTML="";moves=0;matched=0;first=null;lock=false;$("#moves").textContent="Moves: 0";
+  [...icons,...icons].sort(()=>Math.random()-.5).forEach(ic=>{
+    const t=document.createElement("div");t.className="tile";t.dataset.ic=ic;t.textContent="❔";
+    t.addEventListener("click",()=>{
+      if(lock||t.classList.contains("flip")||t.classList.contains("done"))return;
+      t.classList.add("flip");t.textContent=ic;
+      if(!first){first=t;return}
+      moves++;$("#moves").textContent="Moves: "+moves;
+      if(first.dataset.ic===ic){
+        first.classList.replace("flip","done");t.classList.replace("flip","done");first=null;matched++;
+        if(matched===icons.length){$("#moves").textContent=`You did it in ${moves} moves 💖`;const r=t.getBoundingClientRect();burst(r.left,r.top,30)}
+      }else{
+        lock=true;const a=first;first=null;
+        setTimeout(()=>{[a,t].forEach(x=>{x.classList.remove("flip");x.textContent="❔"});lock=false},700);
+      }
+    });
+    b.appendChild(t);
+  });
+}
+$("#reset").addEventListener("click",buildBoard);buildBoard();
+
+// the question
+const no=$("#no"),yes=$("#yes");
+let scale=1;
+function dodge(){
+  const row=$("#row").getBoundingClientRect();
+  no.style.position="absolute";
+  no.style.left=Math.max(0,Math.random()*(row.width-no.offsetWidth))+"px";
+  no.style.top=Math.max(0,Math.random()*(row.height+40-no.offsetHeight))+"px";
+  scale=Math.min(scale+.18,2.2);yes.style.transform=`scale(${scale})`;
+}
+no.addEventListener("mouseenter",dodge);
+no.addEventListener("touchstart",e=>{e.preventDefault();dodge()},{passive:false});
+no.addEventListener("click",dodge);
+yes.addEventListener("click",e=>{
+  $("#yesMsg").textContent="Best answer ever. I love you! 💖";
+  no.style.display="none";
+  for(let i=0;i<5;i++)setTimeout(()=>burst(innerWidth*Math.random(),innerHeight*Math.random(),20),i*180);
+});
+</script>
+</body>
+</html>
